@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Snapshot Match 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div>
+    <label
+      htmlFor="sourceText"
+    >
+      Source Chinese: 
+    </label>
+    <input
+      id="sourceText"
+      onChange={[Function]}
+      type="text"
+      value="你好！"
+    />
+  </div>
+  <div>
+    <label
+      htmlFor="targetText"
+    >
+      Target English: 
+    </label>
+    <input
+      id="targetText"
+      readOnly={true}
+      type="text"
+      value="hello!"
+    />
+  </div>
+  <button
+    type="submit"
+  >
+    Submit
+  </button>
+</form>
+`;
