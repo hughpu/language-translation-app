@@ -3,8 +3,8 @@
 language translation web app for topcoder chanllenge practice
 
 ## Description
-A web application that can translate Chinese to English.
-Source language: Chinese, [example](source.txt)
+A web application that can translate Chinese to English. 
+Source language: Chinese, [example](source.txt) 
 Target Language: English, [example](target.txt)
 
 ## How to Deploy
