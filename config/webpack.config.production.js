@@ -1,9 +1,11 @@
 const path = require("path");
-const webpack = require("webpack");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
+const projectDir = path.resolve(__dirname, "../");
 
 module.exports = {
-  entry: path.resolve(__dirname, "./src/index.js"),
-  mode: "development",
+  entry: path.resolve(projectDir, "src/index.js"),
+  mode: "production",
   module: {
     rules: [
       {
@@ -20,14 +22,11 @@ module.exports = {
   },
   resolve: { extensions: ["*", ".js", ".jsx"] },
   output: {
-    path: path.resolve(__dirname, "dist/"),
-    publicPath: "/dist/",
+    path: path.resolve(projectDir, "dist/"),
     filename: "bundle.js"
   },
-  devServer: {
-    static: path.join(__dirname, "public"),
-    port: 3000,
-    hot: true
-  },
-  plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [new HtmlWebpackPlugin({
+    title: "The translator of Hugh",
+    inject: "body"
+  })]
 };
